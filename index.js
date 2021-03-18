@@ -71,7 +71,7 @@ function loadMaps() {// Creating a map object
     });
 
 }
-console.log('deployment testing')
+console.log('deployment testing again')
 window.onload = function(){
     console.log('deployment test')
     loadMaps();
