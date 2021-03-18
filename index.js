@@ -73,6 +73,6 @@ function loadMaps() {// Creating a map object
 }
 console.log('deployment testing again')
 window.onload = function(){
-    console.log('deployment test')
+    console.log('deployment test again')
     loadMaps();
 }
