@@ -1,9 +1,9 @@
 function toggleMenu() {
     let navItems = document.getElementsByClassName("navItems")[0];
-    if (navItems.style.height == "140px") {
+    if (navItems.style.height == "172px") {
         navItems.style.height = "0px";
     } else {
-        navItems.style.height = "140px";
+        navItems.style.height = "172px";
     }
     document.getElementsByClassName("ham")[0].classList.toggle('active')
 }

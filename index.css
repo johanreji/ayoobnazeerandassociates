@@ -15,7 +15,7 @@ body {
 	z-index: 10000;
 }
 .navItems > div {
-	padding: 8px;
+	padding: 12px 8px;
 	cursor: pointer;
 	color: #9fb8ad;
 }
