@@ -51,22 +51,23 @@ var mapOptions = {
     center: [9.899417911965054, 76.72045885317041],
     zoom: 16
 }
+if (L) {// Creating a map object
+    var map = new L.map('map');
+    // Add OSM tile leayer to the Leaflet map.
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
 
-// Creating a map object
-var map = new L.map('map');
-// Add OSM tile leayer to the Leaflet map.
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+    // Target's GPS coordinates.
+    var target = L.latLng('9.899417911965054', '76.72045885317041');
 
-// Target's GPS coordinates.
-var target = L.latLng('9.899417911965054', '76.72045885317041');
+    // Set map's center to target with zoom 14.
+    map.setView(target, 16);
 
-// Set map's center to target with zoom 14.
-map.setView(target, 16);
+    // Place a marker on the same location.
+    let marker = L.marker(target).addTo(map);
+    marker.on("click", function (event) {
+        window.location.href = 'http://maps.google.com/?q=9.899417911965054, 76.72045885317041';
+    });
 
-// Place a marker on the same location.
-let marker = L.marker(target).addTo(map);
-marker.on("click", function (event) {
-    window.location.href = 'http://maps.google.com/?q=9.899417911965054, 76.72045885317041';
-});
+}
