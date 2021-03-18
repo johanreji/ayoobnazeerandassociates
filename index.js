@@ -51,7 +51,7 @@ var mapOptions = {
     center: [9.899417911965054, 76.72045885317041],
     zoom: 16
 }
-if (L) {// Creating a map object
+function loadMaps() {// Creating a map object
     var map = new L.map('map');
     // Add OSM tile leayer to the Leaflet map.
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -70,4 +70,7 @@ if (L) {// Creating a map object
         window.location.href = 'http://maps.google.com/?q=9.899417911965054, 76.72045885317041';
     });
 
+}
+window.onload = function(){
+    loadMaps();
 }
