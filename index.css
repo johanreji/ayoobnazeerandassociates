@@ -2,6 +2,14 @@ body {
 	margin: 0;
 	font-family: "Open Sans", sans-serif;
 }
+.logo{
+	background-image: url('images/logo.png');
+    height: 30px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+	margin-left: 100px;
+}
 
 .nav {
 	height: 50px;
@@ -190,6 +198,9 @@ input[type="button"] {
 	}
 }
 @media screen and (max-width: 600px) {
+	.logo{
+		margin-left: 12px;
+	}
 	.navItems {
 		position: absolute;
 		top: 100%;
