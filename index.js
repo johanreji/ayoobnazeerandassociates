@@ -1,9 +1,9 @@
 function toggleMenu() {
     let navItems = document.getElementsByClassName("navItems")[0];
-    if (navItems.style.height == "174px") {
+    if (navItems.style.height == "176px") {
         navItems.style.height = "0px";
     } else {
-        navItems.style.height = "174px";
+        navItems.style.height = "176px";
     }
     document.getElementsByClassName("ham")[0].classList.toggle('active')
 }
@@ -71,8 +71,10 @@ function loadMaps() {// Creating a map object
     });
 
 }
-console.log('deployment check again 3')
+console.log('deployment check again 4')
 window.onload = function(){
-    console.log('deployment check again')
+    document.getElementsByClassName("loader")[0].style.display = "none";
+    document.getElementsByClassName("content")[0].style.display = "block";
+    document.getElementsByClassName("nav")[0].style.display = "flex";
     loadMaps();
 }
