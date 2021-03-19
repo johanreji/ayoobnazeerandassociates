@@ -13,6 +13,7 @@ body {
 	width: 100%;
 	position: fixed;
 	z-index: 10000;
+	top: 0;
 }
 .navItems > div {
 	padding: 12px 8px;
