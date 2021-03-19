@@ -1,9 +1,9 @@
 function toggleMenu() {
     let navItems = document.getElementsByClassName("navItems")[0];
-    if (navItems.style.height == "172px") {
+    if (navItems.style.height == "174px") {
         navItems.style.height = "0px";
     } else {
-        navItems.style.height = "172px";
+        navItems.style.height = "174px";
     }
     document.getElementsByClassName("ham")[0].classList.toggle('active')
 }
@@ -42,7 +42,7 @@ function onFormSubmit(form) {
         alert('Please enter message!');
         return;
     }
-    let emailBody = `Hi \n ${form.message.value}`;
+    let emailBody = encodeURIComponent(`Greetings, \n ${form.message.value}`);
     window.open(`mailto:ayoobnazeerandassociates@gmail.com?cc=&subject=Enquiry from ${form.name.value} (${form.tel.value})&body=${emailBody}`, '_self');
 }
 
