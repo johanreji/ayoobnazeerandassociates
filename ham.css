@@ -1,5 +1,5 @@
 .ham {
-	margin: 0 4px 0 auto;
+	margin-left: auto;
 	height: 50px;
 	width: 50px;
 	cursor: pointer;
@@ -10,25 +10,31 @@
 	-ms-user-select: none;
 	user-select: none;
 }
+
 .hamRotate.active {
 	transform: rotate(45deg);
 }
+
 .ham1 .top {
 	stroke-dasharray: 40 139;
 }
+
 .ham1 .bottom {
 	stroke-dasharray: 40 180;
 }
+
 .ham1.active .top {
 	stroke-dashoffset: -98px;
 }
+
 .ham1.active .bottom {
 	stroke-dashoffset: -138px;
 }
+
 .line {
 	fill: none;
 	transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-	stroke: #c4d7bd;
+	stroke: var(--gold, #c9a84c);
 	stroke-width: 5.5;
 	stroke-linecap: round;
 }
